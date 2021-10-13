@@ -23,7 +23,7 @@ class PolicyController(
     val policyService: PolicyService
 ) {
 
-
+    // adding policies
    // @ApiOperation(value = "Add policies and upload the related documents", tags = arrayOf("submiting"))
     @PostMapping("/submitting")
     @Throws(Exception::class)
