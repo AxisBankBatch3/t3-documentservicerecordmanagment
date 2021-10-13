@@ -37,4 +37,6 @@ interface PolicyService {
 
     fun getDerailsByPanCardNumber(_id : String?) : Optional<PolicyHolder?>
 
+    fun isPolicyPresentByPolicyNumber(policyNumber: String) : Boolean
+
 }

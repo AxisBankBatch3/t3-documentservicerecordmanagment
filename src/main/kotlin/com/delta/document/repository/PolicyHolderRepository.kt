@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository
 @Repository
 interface PolicyHolderRepository : MongoRepository<PolicyHolder?,String?> {
 
+    fun existsByPolicyNumber(policyNumber: String) : Boolean
+
 
 }

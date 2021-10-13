@@ -18,6 +18,16 @@
 		<kotlin.version>1.4.21</kotlin.version>
 		<wrapper.version>3.5.46</wrapper.version>
 		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+
+		<sonar.coverage.exclusions>
+			src/main/kotlin/model/**,
+			src/main/kotlin/jwt/**,
+			src/main/kotlin/service/UserDetailsServiceImpl.kt,
+			src/main/kotlin/controller/**
+
+		</sonar.coverage.exclusions>
+
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -142,6 +152,12 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.6</version>
+				<configuration>
+					<excludes>
+						<exclude>**/User.class</exclude>
+
+					</excludes>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
